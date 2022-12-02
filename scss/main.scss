@@ -1,0 +1,49 @@
+$navbar-padding-x: 5px;
+$nav-link-padding-x: 2rem;
+// $navbar-color: rgba(82, 82, 82, 0.123);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body {
+    background-image: url('../background.jpg');
+    background-size: cover;
+}
+
+.background-layer {
+    background-color: rgba(0, 0, 0, 0.274);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.navbar-custom {
+    background-color: rgba(0, 0, 0, 0.664);
+}
+
+
+.navbar-brand {
+    color: rgba($white, .55);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: .15rem;
+    font-style: oblique;
+}
+
+.nav-link {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.nav-button {
+    width: 6rem;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+.nav-button:hover {
+    background: green;
+    border: 2px solid green;
+    color: white;
+}
