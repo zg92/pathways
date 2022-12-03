@@ -1,16 +1,23 @@
-$navbar-padding-x: 5px;
-$nav-link-padding-x: 2rem;
-// $navbar-color: rgba(82, 82, 82, 0.123);
-
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import './components/card/card.scss', './components/navbar/navbar.scss';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
+;
 
 body {
-    background-image: url('../background.jpg');
+    font-family: 'Manrope', sans-serif;
+}
+
+.background-image {
+    background: url('../background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
+    height: 100vh;
+    width: 100vw;
 }
 
 .background-layer {
-    background-color: rgba(0, 0, 0, 0.274);
+    background-color: rgba(0, 0, 0, 0.507);
     position: absolute;
     top: 0;
     left: 0;
@@ -18,32 +25,10 @@ body {
     height: 100vh;
 }
 
-.navbar-custom {
-    background-color: rgba(0, 0, 0, 0.664);
-}
+.app-content-wrapper {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    padding-bottom: 10rem;
 
-
-.navbar-brand {
-    color: rgba($white, .55);
-    font-size: 1.5rem;
-    font-weight: bold;
-    letter-spacing: .15rem;
-    font-style: oblique;
-}
-
-.nav-link {
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-
-.nav-button {
-    width: 6rem;
-    font-weight: bold;
-    border: 2px solid black;
-}
-
-.nav-button:hover {
-    background: green;
-    border: 2px solid green;
-    color: white;
 }

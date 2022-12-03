@@ -1,0 +1,33 @@
+$navbar-padding-x: 5px;
+$nav-link-padding-x: 2rem;
+
+.navbar-custom {
+    background-color: rgba(0, 0, 0, 0.664);
+    z-index: 2;
+}
+
+.navbar-brand {
+    color: rgba(white, .55);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    font-style: oblique;
+}
+
+.nav-link {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.nav-button {
+    width: 6rem;
+    font-weight: bold;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 992px) {
+    .navbar-custom {
+        background-color: rgba(0, 0, 0, 0.89);
+    }
+}
