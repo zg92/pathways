@@ -3,7 +3,7 @@
 
 # misc
 .DS_Store
-config.env
+.env
 
 #compiled sass
 **.css
