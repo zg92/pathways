@@ -2,10 +2,7 @@ const express = require("express");
 require("dotenv").config();
 const cors = require("cors");
 const featureRouter = require("./routes/features");
-const {
-  createUserProcess,
-  mongoConnect,
-} = require("./middleware/mongoose/mongoose");
+const { mongoConnect } = require("./middleware/mongoose/mongoose");
 
 const app = express();
 app.use(
@@ -15,18 +12,13 @@ app.use(
 );
 app.use(express.static("public"));
 app.set("view engine", "ejs");
+app.use("/", featureRouter);
 app.use("/features", featureRouter);
+app.use("/teach", featureRouter);
+app.use("/learn", featureRouter);
 app.use(express.json());
 
 mongoConnect();
-
-app.get("/", (req, res) => {
-  res.render("home");
-});
-
-app.post("/", async (req, res) => {
-  createUserProcess(req.body.passed_email);
-});
 
 app.listen(
   process.env.PORT || 5000,
