@@ -23,9 +23,17 @@ const emailSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", emailSchema);
 
-const checkEmail = async (passedEmail) => {
+const regexCheck = async (passedEmail) => {
+  const emailRegex = new RegExp(
+    /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
+  );
+  return emailRegex.test(passedEmail);
+};
+
+const searchExisting = async (passedEmail) => {
   const userSearch = await User.find({ email: passedEmail });
-  if (userSearch.length > 0) return;
+  if (userSearch.length > 0) return true;
+  else return false;
 };
 
 const createUser = async (passedEmail) => {
@@ -42,8 +50,14 @@ const createUser = async (passedEmail) => {
 };
 
 const createUserProcess = async (passedEmail) => {
-  await checkEmail(passedEmail);
-  await createUser(passedEmail);
+  const regex = await regexCheck(passedEmail);
+  const existing = await searchExisting(passedEmail);
+  // console.log("regex:", regex, "existing", existing);
+  if (regex === true && existing === false) {
+    createUser(passedEmail);
+    return true;
+  }
+  return false;
 };
 
 module.exports = { createUserProcess, mongoConnect };

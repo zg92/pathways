@@ -17,6 +17,19 @@
 
 <div class="app">
   <div class='app-content-wrapper'>
+    <%- include('partials/content-card') %>
+    <div class="feature-card-wrapper">
+      <div class="feature-cards-grid">
+        <% cards.forEach(function(card) { %>
+          <div class="feature-card">
+            <%- card.img %>
+            <div class="feature-card-text"><%= card.text %></div>
+          </div>
+        <% });
+        %>
+      </div>
+    </div>
+   
   
     </div>
   </div>

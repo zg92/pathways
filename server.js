@@ -2,6 +2,9 @@ const express = require("express");
 require("dotenv").config();
 const cors = require("cors");
 const featureRouter = require("./routes/features");
+const homeRouter = require("./routes/home");
+const learnRouter = require("./routes/learn");
+const teachRouter = require("./routes/teach");
 const { mongoConnect } = require("./middleware/mongoose/mongoose");
 
 const app = express();
@@ -12,11 +15,11 @@ app.use(
 );
 app.use(express.static("public"));
 app.set("view engine", "ejs");
-app.use("/", featureRouter);
+
+app.use("/", homeRouter);
 app.use("/features", featureRouter);
-app.use("/teach", featureRouter);
-app.use("/learn", featureRouter);
-app.use(express.json());
+app.use("/teach", teachRouter);
+app.use("/learn", learnRouter);
 
 mongoConnect();
 

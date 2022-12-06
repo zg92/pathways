@@ -1,0 +1,33 @@
+.card-input-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: fit-content;
+    z-index: 1;
+}
+
+.card-input {
+    width: 60%;
+    min-width: 18rem;
+}
+
+.card-signup-button {
+    width: 60%;
+    min-width: 18rem;
+    margin-top: .75rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    background: rgb(160, 44, 241);
+    border-color: rgb(160, 44, 241);
+    color: white;
+}
+
+.card-signup-button:hover {
+    // background: green;
+    color: black;
+}

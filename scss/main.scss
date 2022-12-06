@@ -1,34 +1,36 @@
-@import './components/card/card.scss', './components/navbar/navbar.scss';
+@import './components/navbar/navbar.scss',
+'./components/content-card/content-card.scss',
+'./components/sign-up/sign-up.scss',
+'./components/feature-card/feature-card.scss';
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
-;
 
 body {
     font-family: 'Manrope', sans-serif;
-}
-
-.background-image {
-    background: url('../img/background.jpg') no-repeat center center fixed;
+    background-image: url('../img/background.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 100vh;
-    width: 100vw;
+    background-color: black;
+
 }
 
 .background-layer {
     background-color: rgba(0, 0, 0, 0.507);
-    position: absolute;
+    position: fixed;
+    overflow-y: auto;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 .app-content-wrapper {
     display: flex;
     width: 100vw;
-    justify-content: center;
-    padding-bottom: 10rem;
-
+    flex-direction: column;
+    align-items: center;
 }
