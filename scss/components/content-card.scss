@@ -6,7 +6,6 @@
     width: fit-content;
     @include flexbox(column, center, center);
     z-index: 1;
-    color: $font-primary-white;
 }
 
 .content-card-body {

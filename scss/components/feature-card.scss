@@ -16,7 +16,7 @@
 }
 
 .feature-card {
-    background: rgba(0, 0, 0, 0.521);
+    background: $background-black-transparent;
     height: 20rem;
     width: 15rem;
     border-radius: 1rem;
@@ -43,7 +43,6 @@
 .feature-card-text {
     width: 80%;
     height: 3rem;
-    color: $font-primary-white;
     text-align: center;
     font-weight: bold;
 }

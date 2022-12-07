@@ -35,7 +35,6 @@
 
 .sub-content-text {
     @include flexbox(column);
-    color: $font-primary-white;
     width: 100%;
     padding: 2rem;
 }
