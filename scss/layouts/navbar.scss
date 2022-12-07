@@ -1,0 +1,20 @@
+$navbar-padding-x: 5px;
+$nav-link-padding-x: 2rem;
+
+.navbar-custom {
+    background-color: rgba(0, 0, 0, 0.664);
+    z-index: 2;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    margin-bottom: 3rem;
+}
+
+.navbar-brand {
+    color: rgba(white, .55);
+    @include logoLettering;
+}
+
+.active {
+    color: white;
+}

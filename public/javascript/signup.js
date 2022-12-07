@@ -2,7 +2,7 @@ const input = document.querySelector(".card-input");
 const inputButton = document.querySelector(".card-signup-button");
 
 const postData = async (email) => {
-  const response = await fetch("/", {
+  const response = await fetch("/email", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

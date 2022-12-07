@@ -1,0 +1,19 @@
+<!-- views/partials/sub-content-card.ejs -->
+<div class="sub-content-outer-wrapper">
+  <% subContent.forEach(function(content) { %>
+<div class="sub-content-wrapper">
+    <div class="sub-content-image-wrapper">
+      <div class="sub-content-image-frame">
+        <%- content.img %>
+      </div></div>
+      <div class="sub-content-text">
+        <div class="sub-content-text-title"> 
+          <h2><%- content.title %></h2></div> 
+      <div class="sub-content-text-body">
+        <p><%- content.text %></p>
+    </div>
+    </div>
+  </div>
+  <% }); %>
+</div>
+<script src="../javascript/subContent.js"></script>

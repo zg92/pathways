@@ -1,0 +1,12 @@
+<!-- views/partials/feature-card.ejs -->
+<div class="feature-card-wrapper">
+  <div class="feature-cards-grid">
+  <% cards.forEach(function(card) { %>
+<div class="feature-card">
+    <%- card.img %>
+    <div class="feature-card-text small-body"><%= card.text %></div>
+  </div> 
+  <% });
+  %>
+</div>
+</div>

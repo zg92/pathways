@@ -1,0 +1,70 @@
+// @import '../../abstract/_abstracts-dir';
+
+.feature-card-wrapper {
+    width: 70%;
+    height: fit-content;
+    margin-top: 2rem;
+}
+
+.feature-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 100%;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.feature-card {
+    background: rgba(0, 0, 0, 0.521);
+    height: 20rem;
+    width: 15rem;
+    border-radius: 1rem;
+    @include flexbox(column, space-evenly, center);
+}
+
+.feature-card:hover {
+    border: 1px solid $font-primary-white;
+}
+
+.feature-card:hover>.feature-card-img {
+    transform: rotate(10deg);
+}
+
+.feature-card-img {
+    width: 60%;
+    max-height: 8rem;
+    height: fit-content;
+    @include flexbox(column, center);
+    margin-top: 2rem;
+    transition: .2s ease-in-out;
+}
+
+.feature-card-text {
+    width: 80%;
+    height: 3rem;
+    color: $font-primary-white;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .feature-card-wrapper {
+        margin-top: 5rem;
+    }
+
+    .feature-cards-grid {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, auto);
+        justify-content: center;
+        height: fit-content;
+        row-gap: 1rem;
+    }
+
+    .feature-card {
+        width: 100%;
+        margin-bottom: 2rem;
+
+    }
+}

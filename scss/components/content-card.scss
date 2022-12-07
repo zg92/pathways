@@ -1,0 +1,34 @@
+// @import '../../node_modules/bootstrap/scss/bootstrap.scss';
+// @import '../../abstract/_abstracts-dir';
+
+
+.content-card {
+    width: fit-content;
+    @include flexbox(column, center, center);
+    z-index: 1;
+    color: $font-primary-white;
+}
+
+.content-card-body {
+    @include flexbox(column, space-evenly, center);
+    width: 100%;
+}
+
+.content-card-title {
+    width: 80%;
+    text-align: center;
+    @include flexbox(column, center, center);
+    margin-bottom: 2rem;
+}
+
+.content-card-text-wrapper {
+    width: 90%;
+    height: fit-content;
+    @include flexbox(column, center, center);
+    text-align: justify;
+}
+
+.content-card-text {
+    text-align: center;
+    width: 95%;
+}

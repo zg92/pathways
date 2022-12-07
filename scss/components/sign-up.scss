@@ -1,0 +1,27 @@
+.card-input-button-wrapper {
+    @include flexbox(column, center, center);
+    width: 90%;
+    height: fit-content;
+    z-index: 1;
+    height: 12rem;
+}
+
+.card-input {
+    width: 60%;
+    min-width: 18rem;
+}
+
+.card-signup-button {
+    width: 60%;
+    min-width: 18rem;
+    margin-top: .75rem;
+    @include flexbox(column, center, center);
+    background: $brand-purple;
+    border-color: $brand-purple;
+    color: $font-primary-white;
+    font-size: 1rem !important;
+}
+
+.card-signup-button:hover {
+    color: $font-primary-black;
+}

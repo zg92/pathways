@@ -1,0 +1,10 @@
+.app-content-wrapper {
+    width: 100vw;
+    height: fit-content;
+    min-height: 81vh;
+    @include flexbox(column, center, center)
+}
+
+.sub-content-outer-wrapper {
+    margin-top: 4rem;
+}

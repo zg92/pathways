@@ -1,0 +1,48 @@
+// @import '../../abstract/_abstracts-dir';
+
+.footer-wrapper {
+    width: 100vw;
+    height: fit-content;
+    background: $background-black-transparent;
+    @include flexbox(row, space-around);
+    z-index: 2;
+    padding: 1rem;
+}
+
+.footer-content {
+    @include flexbox(row, space-evenly);
+    width: 100%;
+}
+
+.footer-brand {
+    width: 33%;
+    text-decoration: none;
+    @include flexbox(row, left, center);
+}
+
+.footer-icon-wording {
+    color: $nav-link-primary;
+    @include logoLettering;
+    display: none;
+}
+
+.footer-social {
+    width: 33%;
+    @include flexbox(row, space-evenly, center);
+}
+
+.footer-links {
+    text-align: right;
+    @include flexbox(column, space-evenly);
+    width: 33%;
+    margin-right: 1rem;
+}
+
+.footer-link {
+    color: $nav-link-primary;
+    font-size: .75rem !important;
+}
+
+.footer-link:hover {
+    color: $active-link-white;
+}
