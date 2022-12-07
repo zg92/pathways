@@ -4,7 +4,7 @@ const { createUserProcess } = require("../middleware/mongoose/mongoose");
 const router = express.Router();
 router.use(express.json());
 
-router.post("/", async (req, res) => {
+router.post("/email", async (req, res) => {
   const createUser = await createUserProcess(req.body.passed_email);
   if (createUser) {
     res.status(200).json({
