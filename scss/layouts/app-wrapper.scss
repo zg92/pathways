@@ -2,9 +2,5 @@
     width: 100vw;
     height: fit-content;
     min-height: 88vh;
-    @include flexbox(column, center, center)
-}
-
-.sub-content-outer-wrapper {
-    margin-top: 4rem;
+    @include flexbox(column, center, center);
 }
