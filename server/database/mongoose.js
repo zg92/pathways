@@ -1,27 +1,4 @@
-const mongoose = require("mongoose");
-require("dotenv").config();
-
-const uri = process.env.MONGOOSE_URI;
-
-const mongoConnect = async () => {
-  try {
-    mongoose
-      .connect(uri, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-      })
-      .then(() => console.log("Connected to Mongo!"));
-  } catch (e) {
-    console.log("Could not connect:", e);
-  }
-};
-
-const emailSchema = new mongoose.Schema({
-  date: Date,
-  email: String,
-});
-
-const User = mongoose.model("User", emailSchema);
+const Email = require("../models/emailModel");
 
 const regexCheck = async (passedEmail) => {
   const emailRegex = new RegExp(
@@ -31,15 +8,14 @@ const regexCheck = async (passedEmail) => {
 };
 
 const searchExisting = async (passedEmail) => {
-  const userSearch = await User.find({ email: passedEmail });
+  const userSearch = await Email.find({ email: passedEmail });
   if (userSearch.length > 0) return true;
   else return false;
 };
 
 const createUser = async (passedEmail) => {
   try {
-    const newUser = new User({
-      date: new Date().toLocaleString().split(",")[0],
+    const newUser = new Email({
       email: passedEmail,
     });
     await newUser.save();
@@ -52,7 +28,6 @@ const createUser = async (passedEmail) => {
 const createUserProcess = async (passedEmail) => {
   const regex = await regexCheck(passedEmail);
   const existing = await searchExisting(passedEmail);
-  // console.log("regex:", regex, "existing", existing);
   if (regex === true && existing === false) {
     createUser(passedEmail);
     return true;
@@ -60,4 +35,4 @@ const createUserProcess = async (passedEmail) => {
   return false;
 };
 
-module.exports = { createUserProcess, mongoConnect };
+module.exports = createUserProcess;
