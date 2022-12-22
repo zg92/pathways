@@ -18,5 +18,5 @@ To view the site:
 2. Run `npm install` to install required dependencies
 3. Ensure Sass is being compiled via running `--watch scss/styles.scss public/stylesheets/main.scss`
 4. Create .env file in the src directory and create and add a variable called `MONGOOSE_URI` containing the app credentials from your own MongoDB cluster. 
-5. Run `npm run dev` to view the website
+5. Run `npm run dev` to start a local server and view the website
 
